@@ -67,7 +67,7 @@ void Array::doubleArray()
     capacity=2*capacity;//Or capacity*=2; //Don't forget this
     delete []ptr;
     ptr=ptr1;
-    delete []ptr1;
+    // delete []ptr1;  NOTE: 👉 By doing this, we are losing the array. 
 }
 void Array::HalfArray()
 {
@@ -78,7 +78,7 @@ void Array::HalfArray()
     capacity=capacity/2;//Or capacity/=2;
     delete []ptr;
     ptr=ptr1;
-    delete []ptr1;
+    // delete []ptr1;  NOTE: 👉 By doing this, we are lossing the array. don't do this mistakes.
 }
 void Array::del(int index)
 {
